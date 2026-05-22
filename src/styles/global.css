@@ -5,16 +5,20 @@ body{
    font-size: 1.6rem; 
 }
 
-h1{
-    color: var(--background-color);
-    text-align: center;
-    margin-top: 20px;
-}
-
 p{
     color: #f1e9e999;
-    max-width: 500px;
-    margin: 20px, auto;
+    max-width: 500rem;
+    
     line-height: 1.5;
     text-align: center;
+}
+
+.container{
+    background-color: #a9e9eee9;
+    max-width: 670rem;
+    margin: 0% auto;
+}
+
+.content{
+background-color: rgb(13, 13, 110);
 }
