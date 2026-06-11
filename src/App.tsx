@@ -1,26 +1,31 @@
-import { Fragment } from "react/jsx-runtime"
-import "./styles/global.css"
-import "./styles/theme.css"
-import { Heading } from "./components/Heading"
-import { TimerIcon } from "lucide-react"
- 
- export function App(){
-  console.log("Olá Mundo!")
-  return(
-    <Fragment> 
-         <Heading>Hello World 0! 
-          <button><TimerIcon></TimerIcon></button></Heading>   
-         
-      <div className="container">
-       <div className="content">
-           </div>
-      </div>         
+import { useState } from 'react';
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import heroImg from './assets/hero.png'
+import { Container } from './components/Container';
+import { Logo } from './components/Logo';
+import './App.css'
 
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit iptum.
-        Omnis alias cupiditate eaque caesar ad ipsum nobis esse repellat soluta illum quisquam laboriosam autem nesciunt sit reprehenderit porro, 
-        quia eum libero aegyptus quidem.
-      </p>
-  </Fragment>
-  )
-  }
+
+export function App(){
+  const [count, setCount] = useState<number>(0)
+
+  const incrementar = () => setCount(count + 1)
+  const decrementar = () => setCount(count - 1)
+  const resetar = () => setCount(0)
+
+  return (
+    <>
+   <div className='app'>
+    <header className='app-header'>
+    <h1> Meu Primeiro App React</h1>
+    <p>Contador: <strong>{count}</strong></p>
+
+  <div classname=
+
+    </>
+
+  );
+}
+
+export default App
