@@ -4,6 +4,9 @@ import {CountDown} from './components/CountDown';
 import {Menu} from './components/Menu';
 import {Logo} from './components/Logo';
 import { DefaultInput } from './components/DefaultInput';
+import { Cycles } from './components/Cycles';
+import { DefaultButton } from './components/DefaultButton';
+import { PauseCircleIcon, PlayCircleIcon } from 'lucide-react';
 
 export function App(){
  
@@ -28,7 +31,11 @@ export function App(){
             <Container>
                 <form className="form" action="">
                     <div className="formRow">
-                        <DefaultInput type='text' />
+                        <DefaultInput
+                        labelText='Task'
+                        id="myInput" 
+                        type='text'
+                        placeholder='Enter your task' required />
                     </div>
                     <div className='formRow'>
                         <p>Lorem ipsum, velit ratione officiis corrupti totam itaque enim molestiae culpa fugit et at, dolorum excepturi. magnam.</p>
@@ -39,6 +46,21 @@ export function App(){
                     </div>
                     <div className='formRow'>
                         <button type="submit">Add Task</button>
+                    </div>
+
+                    <DefaultButton
+                       icon={<PlayCircleIcon />}
+                      // onClick={}
+                    />
+
+                    <DefaultButton
+                       icon={<PauseCircleIcon />}
+                       color='red'
+                       //disabled={}
+                    />
+
+                    <div className='formRow'>
+                        <Cycles />
                     </div>
                 </form>             
             </Container>
